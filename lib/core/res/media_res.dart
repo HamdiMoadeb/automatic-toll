@@ -16,6 +16,10 @@ class MediaRes {
   static const steamCup = '$_baseVector/steam_cup.png';
   static const turquoisePotPlant = '$_baseVector/turquoise_pot_plant.png';
 
+  static const payToll = '$_baseVector/pay_toll.png';
+  static const tollAlert = '$_baseVector/toll_alert.png';
+  static const tollTrip = '$_baseVector/toll_trip.png';
+
   /// Backgrounds
   static const onBoardingBackground = '$_baseImage/onBoarding_background.png';
   static const authGradientBackground =

@@ -21,6 +21,8 @@ Ensure you have the following tools and dependencies installed before running th
 * [http](https://pub.dev/packages/http) v1.1.2  (HTTP requests)
 * [google_maps_flutter](https://pub.dev/packages/google_maps_flutter) v2.5.0  (Google Maps widget)
 * [shared_preferences](https://pub.dev/packages/shared_preferences) v2.2.2  (Persistent storage)
+* [lottie](https://pub.dev/packages/lottie) v2.7.0  (After Effects animations)
+* [smooth_page_indicator](https://pub.dev/packages/smooth_page_indicator) v1.1.0  (Page indicator)
 
 
 
