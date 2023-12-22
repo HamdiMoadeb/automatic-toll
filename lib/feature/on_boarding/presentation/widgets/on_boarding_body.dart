@@ -26,7 +26,7 @@ class OnBoardingBody extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontFamily: Fonts.aeonik,
-                  fontSize: 40,
+                  fontSize: 36,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -34,7 +34,7 @@ class OnBoardingBody extends StatelessWidget {
               Text(
                 pageContent.description,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 15),
               ),
               SizedBox(height: context.height * .05),
               ElevatedButton(
@@ -50,7 +50,7 @@ class OnBoardingBody extends StatelessWidget {
                   context.read<OnBoardingCubit>().cacheFirstTimer();
                 },
                 child: const Text(
-                  'Get Started',
+                  "C'EST PARTI!",
                   style: TextStyle(
                     fontFamily: Fonts.aeonik,
                     fontWeight: FontWeight.bold,

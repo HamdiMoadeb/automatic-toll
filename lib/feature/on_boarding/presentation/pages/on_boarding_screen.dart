@@ -56,7 +56,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ],
                 ),
                 Align(
-                  alignment: const Alignment(0, .04),
+                  alignment: const Alignment(0, .07),
                   child: SmoothPageIndicator(
                     controller: pageController,
                     count: 3,
@@ -70,9 +70,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     effect: const WormEffect(
                       dotHeight: 10,
                       dotWidth: 10,
-                      spacing: 40,
+                      spacing: 35,
                       activeDotColor: Colours.primaryColour,
-                      dotColor: Colors.white,
+                      dotColor: Colors.grey,
                     ),
                   ),
                 ),

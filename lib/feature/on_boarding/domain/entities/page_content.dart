@@ -27,7 +27,7 @@ class PageContent extends Equatable {
     image: MediaRes.tollAlert,
     title: 'Alerte péage',
     description:
-    'Recevez des notifications avec le coût estimé du péage à chaque fois que vous passez un point de péage',
+    'Recevez des notifications avec le coût estimé à chaque fois que vous passez un point de péage',
   );
 
   const PageContent.third()
@@ -35,7 +35,7 @@ class PageContent extends Equatable {
     image: MediaRes.tollTrip,
     title: 'Calculateur de trajet',
     description:
-    'Trouvez l\'itinéraire le moins cher et le plus rapide vers votre destination et estimez les coûts de péage pour un voyage',
+    'Trouvez l\'itinéraire le plus rapide vers votre destination et estimez les coûts de péage pour un voyage',
   );
 
 
