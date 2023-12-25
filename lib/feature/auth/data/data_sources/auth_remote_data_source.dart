@@ -1,6 +1,6 @@
-
 import 'package:tollxpress/core/enums/update_user.dart';
 import 'package:tollxpress/feature/auth/data/models/user_model.dart';
+import 'package:http/http.dart' as http;
 
 abstract class AuthRemoteDataSource {
   AuthRemoteDataSource();
@@ -22,12 +22,12 @@ abstract class AuthRemoteDataSource {
     dynamic userData,
     required UpdateUserAction action,
   });
-
-
 }
 
-class AuthRemoteDataSourceImpl implements AuthRemoteDataSource{
+class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
+  final http.Client client;
 
+  const AuthRemoteDataSourceImpl(this.client);
 
   @override
   Future<void> forgotPassword(String email) {
@@ -42,7 +42,10 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource{
   }
 
   @override
-  Future<void> signUp({required String email, required String fullName, required String password}) {
+  Future<void> signUp(
+      {required String email,
+      required String fullName,
+      required String password}) {
     // TODO: implement signUp
     throw UnimplementedError();
   }
@@ -52,8 +55,4 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource{
     // TODO: implement updateUser
     throw UnimplementedError();
   }
-
-
 }
-
-

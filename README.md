@@ -23,6 +23,7 @@ Ensure you have the following tools and dependencies installed before running th
 * [shared_preferences](https://pub.dev/packages/shared_preferences) v2.2.2  (Persistent storage)
 * [lottie](https://pub.dev/packages/lottie) v2.7.0  (After Effects animations)
 * [smooth_page_indicator](https://pub.dev/packages/smooth_page_indicator) v1.1.0  (Page indicator)
+* [provider](https://pub.dev/packages/provider) v6.1.1  (Global state management)
 
 
 

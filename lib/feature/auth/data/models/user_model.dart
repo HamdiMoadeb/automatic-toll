@@ -6,9 +6,7 @@ class UserModel extends LocalUser {
   const UserModel({
     required super.uid,
     required super.email,
-    required super.point,
     required super.fullName,
-    super.bio,
     super.profilePic,
   });
 
@@ -16,10 +14,8 @@ class UserModel extends LocalUser {
       : this(
           uid: '',
           email: '',
-          point: 0,
           fullName: '',
           profilePic: '',
-          bio: '',
         );
 
   UserModel.fromMap(DataMap map)
@@ -27,8 +23,6 @@ class UserModel extends LocalUser {
           uid: map["uid"] as String,
           email: map["email"] as String,
           profilePic: map["profilePic"] as String?,
-          bio: map["bio"] as String?,
-          point: (map["point"] as num).toInt(),
           fullName: map["fullName"] as String,
         );
 
@@ -37,8 +31,6 @@ class UserModel extends LocalUser {
       'uid': uid,
       'email': email,
       'profilePic': profilePic,
-      'bio': bio,
-      'point': point,
       'fullName': fullName,
     };
   }
@@ -47,16 +39,12 @@ class UserModel extends LocalUser {
     String? uid,
     String? email,
     String? profilePic,
-    String? bio,
-    int? point,
     String? fullName,
   }) {
     return LocalUser(
       uid: uid ?? this.uid,
       email: email ?? this.email,
       profilePic: profilePic ?? this.profilePic,
-      bio: bio ?? this.bio,
-      point: point ?? this.point,
       fullName: fullName ?? this.fullName,
     );
   }
