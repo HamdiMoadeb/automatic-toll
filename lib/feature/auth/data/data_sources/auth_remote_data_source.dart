@@ -1,4 +1,6 @@
 import 'package:tollxpress/core/enums/update_user.dart';
+import 'package:tollxpress/core/errors/exceptions.dart';
+import 'package:tollxpress/core/errors/failure.dart';
 import 'package:tollxpress/feature/auth/data/models/user_model.dart';
 import 'package:http/http.dart' as http;
 
@@ -32,13 +34,13 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<void> forgotPassword(String email) {
     // TODO: implement forgotPassword
-    throw UnimplementedError();
+    throw const ServerException(message: 'Unimplemented Feature', statusCode: 404);
   }
 
   @override
   Future<UserModel> signIn({required String email, required String password}) {
     // TODO: implement signIn
-    throw UnimplementedError();
+    throw const ServerException(message: 'Unimplemented Feature', statusCode: 404);
   }
 
   @override
@@ -47,12 +49,12 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       required String fullName,
       required String password}) {
     // TODO: implement signUp
-    throw UnimplementedError();
+    throw const ServerException(message: 'Unimplemented Feature', statusCode: 404);
   }
 
   @override
   Future<void> updateUser({userData, required UpdateUserAction action}) {
     // TODO: implement updateUser
-    throw UnimplementedError();
+    throw const ServerException(message: 'Unimplemented Feature', statusCode: 404);
   }
 }

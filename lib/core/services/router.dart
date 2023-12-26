@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tollxpress/core/common/views/page_under_construction.dart';
 import 'package:tollxpress/feature/auth/presentation/manager/bloc/auth_bloc.dart';
+import 'package:tollxpress/feature/auth/presentation/pages/forgot_password_screen.dart';
 import 'package:tollxpress/feature/auth/presentation/pages/sign_in_screen.dart';
 import 'package:tollxpress/feature/auth/presentation/pages/sign_up_screen.dart';
 import 'package:tollxpress/feature/home/presentation/pages/home_screen.dart';
@@ -53,6 +54,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case HomeScreen.routeName:
       return _pageBuilder(
         (_) => const HomeScreen(),
+        settings: settings,
+      );
+    case ForgotPasswordScreen.routeName:
+      return _pageBuilder(
+            (_) => BlocProvider<AuthBloc>(
+          create: (_) => serviceLocator<AuthBloc>(),
+          child: const ForgotPasswordScreen(),
+        ),
         settings: settings,
       );
     default:
