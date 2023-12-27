@@ -26,6 +26,7 @@ Ensure you have the following tools and dependencies installed before running th
 * [provider](https://pub.dev/packages/provider) v6.1.1  (Global state management)
 * [iconly](https://pub.dev/packages/iconly) v1.0.1  (Iconly icons)
 * [uuid](https://pub.dev/packages/uuid) v4.2.2  (Generate UUID)
+* [image_picker](https://pub.dev/packages/image_picker) v1.0.5  (Image Picker)
 
 
 

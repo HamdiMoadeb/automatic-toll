@@ -7,6 +7,7 @@ import 'package:tollxpress/feature/home/presentation/pages/views/complaint_view.
 import 'package:tollxpress/feature/home/presentation/pages/views/tag_view.dart';
 import 'package:tollxpress/feature/home/presentation/pages/views/trip_view.dart';
 import 'package:tollxpress/feature/home/presentation/pages/views/wallet_view.dart';
+import 'package:tollxpress/feature/profile/presentation/pages/profile_screen.dart';
 
 class DashboardController extends ChangeNotifier {
   List<int> _indexHistory = [0];
@@ -25,11 +26,11 @@ class DashboardController extends ChangeNotifier {
       child: const PersistentView(),
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigator(TabItem(child: const WalletView())),
+      create: (_) => TabNavigator(TabItem(child: const ComplaintView())),
       child: const PersistentView(),
     ),
     ChangeNotifierProvider(
-      create: (_) => TabNavigator(TabItem(child: const ComplaintView())),
+      create: (_) => TabNavigator(TabItem(child: const ProfileScreen())),
       child: const PersistentView(),
     ),
   ];

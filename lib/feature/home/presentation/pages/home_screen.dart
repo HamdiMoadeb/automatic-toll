@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.white,
             selectedItemColor: Colours.primaryColour,
             unselectedItemColor: Colors.grey,
-            showUnselectedLabels: true,
+            showUnselectedLabels: false,
             unselectedLabelStyle: const TextStyle(color: Colors.grey),
             selectedLabelStyle: const TextStyle(color: Colours.primaryColour),
             elevation: 8,
@@ -76,22 +76,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.account_balance_wallet,
+                  Icons.warning_rounded,
                   color: controller.currentIndex == 3
                       ? Colours.primaryColour
                       : Colors.grey,
                 ),
-                label: 'Wallet',
+                label: 'Urgence',
                 backgroundColor: Colors.white,
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.warning_rounded,
+                  Icons.person,
                   color: controller.currentIndex == 4
                       ? Colours.primaryColour
                       : Colors.grey,
                 ),
-                label: 'Urgence',
+                label: 'Profil',
                 backgroundColor: Colors.white,
               ),
             ],

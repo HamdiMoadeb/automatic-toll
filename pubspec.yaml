@@ -24,6 +24,7 @@ dependencies:
   provider: ^6.1.1
   iconly: ^1.0.1
   uuid: ^4.2.2
+  image_picker: ^1.0.5
 
 
 dev_dependencies:
@@ -37,6 +38,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/icons/
     - assets/images/
     - assets/lottie/
     - assets/vectors/
