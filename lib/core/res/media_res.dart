@@ -26,6 +26,7 @@ class MediaRes {
 
   // Icons
   static const user = '$_baseIcon/user.png';
+  static const wallet = '$_baseIcon/wallet.png';
 
   // Lottie
   static const emptyLeaderboard = '$_baseLottie/empty_leaderboard.json';

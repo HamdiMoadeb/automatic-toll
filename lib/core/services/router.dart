@@ -32,10 +32,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         //     context.read<UserProvider>().initUser(user);
         //     return const HomeScreen();
         // }
-        // return BlocProvider<AuthBloc>(
-        //   create: (_) => serviceLocator<AuthBloc>(),
-        //   child: const SignInScreen(),
-        // );
+
         const user = UserModel(
           uid: "uid",
           email: "hamdimoadeb@gmail.com",
@@ -43,6 +40,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           profilePic: "",
         );
         context.read<UserProvider>().initUser(user);
+        // return BlocProvider<AuthBloc>(
+        //   create: (_) => serviceLocator<AuthBloc>(),
+        //   child: const SignInScreen(),
+        // );
         return const HomeScreen();
       }, settings: settings);
     case SignInScreen.routeName:
