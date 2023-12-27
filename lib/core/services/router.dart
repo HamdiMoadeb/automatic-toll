@@ -30,10 +30,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         //     context.read<UserProvider>().initUser(user);
         //     return const HomeScreen();
         // }
-        return BlocProvider<AuthBloc>(
-          create: (_) => serviceLocator<AuthBloc>(),
-          child: const SignInScreen(),
-        );
+        // return BlocProvider<AuthBloc>(
+        //   create: (_) => serviceLocator<AuthBloc>(),
+        //   child: const SignInScreen(),
+        // );
+        return const HomeScreen();
       }, settings: settings);
     case SignInScreen.routeName:
       return _pageBuilder(

@@ -25,6 +25,7 @@ Ensure you have the following tools and dependencies installed before running th
 * [smooth_page_indicator](https://pub.dev/packages/smooth_page_indicator) v1.1.0  (Page indicator)
 * [provider](https://pub.dev/packages/provider) v6.1.1  (Global state management)
 * [iconly](https://pub.dev/packages/iconly) v1.0.1  (Iconly icons)
+* [uuid](https://pub.dev/packages/uuid) v4.2.2  (Generate UUID)
 
 
 
