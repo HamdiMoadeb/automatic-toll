@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tollxpress/core/common/app/providers/user_provider.dart';
 import 'package:tollxpress/core/services/router.dart';
+import 'package:tollxpress/feature/home/presentation/manager/providers/dashboard_controller.dart';
 
 import 'core/res/colours.dart';
 import 'core/res/fonts.dart';
@@ -18,8 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => UserProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => DashboardController()),
+      ],
       child: MaterialApp(
         title: 'TollXpress',
         debugShowCheckedModeBanner: false,

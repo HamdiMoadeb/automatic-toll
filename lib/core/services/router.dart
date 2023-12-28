@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tollxpress/core/common/app/providers/user_provider.dart';
 import 'package:tollxpress/core/common/views/page_under_construction.dart';
+import 'package:tollxpress/feature/auth/data/models/user_model.dart';
 import 'package:tollxpress/feature/auth/presentation/manager/bloc/auth_bloc.dart';
 import 'package:tollxpress/feature/auth/presentation/pages/forgot_password_screen.dart';
 import 'package:tollxpress/feature/auth/presentation/pages/sign_in_screen.dart';
@@ -30,10 +32,19 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         //     context.read<UserProvider>().initUser(user);
         //     return const HomeScreen();
         // }
-        return BlocProvider<AuthBloc>(
-          create: (_) => serviceLocator<AuthBloc>(),
-          child: const SignInScreen(),
+
+        const user = UserModel(
+          uid: "uid",
+          email: "hamdimoadeb@gmail.com",
+          fullName: "Hamdi Moadeb",
+          profilePic: "",
         );
+        context.read<UserProvider>().initUser(user);
+        // return BlocProvider<AuthBloc>(
+        //   create: (_) => serviceLocator<AuthBloc>(),
+        //   child: const SignInScreen(),
+        // );
+        return const HomeScreen();
       }, settings: settings);
     case SignInScreen.routeName:
       return _pageBuilder(
@@ -58,7 +69,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       );
     case ForgotPasswordScreen.routeName:
       return _pageBuilder(
-            (_) => BlocProvider<AuthBloc>(
+        (_) => BlocProvider<AuthBloc>(
           create: (_) => serviceLocator<AuthBloc>(),
           child: const ForgotPasswordScreen(),
         ),
